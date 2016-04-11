@@ -1,13 +1,11 @@
-DebOps - Test suite
-===================
+Test suite
+==========
 
 Chugging away at writing Ansible tests.
 
 What is this repository about?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is a test suite for all of the DebOps roles using the
-`RoleSpec <https://github.com/nickjj/rolespec>`_ test library.
+It is a test suite for Ansible roles using the `RoleSpec <https://github.com/nickjj/rolespec>`_ test library.
 
-You can use these tests as a guide for both writing tests using RoleSpec and
-as documentation on how to use a specific DebOps role.
+The basis is taken `DebOps <http://debops.org/>`_ `test-suite <https://github.com/debops/test-suite>`_.
