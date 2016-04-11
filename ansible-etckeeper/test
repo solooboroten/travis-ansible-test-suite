@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# test: Test etckeeper
+# Copyright (C) 2016 Aleksey Avdeev <solo@altlinux.org>
+
+
+. "${ROLESPEC_LIB}/main"
+. "${ROLESPEC_TEST}/../defaults.conf"
+
+
+install_ansible ${test_ansible_version}
+ansible_plugins
+
+assert_playbook_check_runs
+
+
+# Check etckeeper repo
+#GIT_DIR=/etc/.git sudo -H git log
+assert_in "$(GIT_DIR=/etc/.git sudo -H git log)" 'Initial commit'
